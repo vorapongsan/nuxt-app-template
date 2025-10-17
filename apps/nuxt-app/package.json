@@ -1,0 +1,21 @@
+{
+  "name": "@tpqi/nuxt-app",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "targets": {
+      "nuxi:prepare": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "apps/nuxt-app",
+          "command": "nuxi prepare"
+        }
+      },
+      "build": {
+        "dependsOn": [
+          "nuxi:prepare"
+        ]
+      }
+    }
+  }
+}

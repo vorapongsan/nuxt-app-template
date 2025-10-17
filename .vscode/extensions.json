@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "nrwl.angular-console",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "Nuxtr.nuxtr-vscode",
+    "Vue.volar",
+    "naumovs.color-highlight",
+    "rvest.vs-code-prettier-eslint",
+    "sibiraj-s.vscode-scss-formatter",
+    "ms-vscode.vscode-typescript-next"
+  ]
+}

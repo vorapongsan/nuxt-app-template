@@ -1,0 +1,18 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#013606",
+    "titleBar.activeBackground": "#014C08",
+    "titleBar.activeForeground": "#ECFFEE"
+  },
+  // Show workspace recommended extensions prompt
+  "extensions.ignoreRecommendations": false,
+  // Formatting and editor behavior
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // ESLint validation for relevant languages
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "vue"
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib"
+}
