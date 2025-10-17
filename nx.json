@@ -2,7 +2,10 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "defaultBase": "master",
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -69,14 +72,46 @@
         "ciTargetName": "e2e-ci"
       }
     },
-    "@nx-dotnet/core"
+    {
+      "plugin": "@nx-dotnet/core",
+      "options": {
+        "solutionFile": "{npmScope}.nx-dotnet.sln",
+        "inferProjects": true,
+        "nugetPackages": {
+          "Microsoft.AspNetCore.OpenApi": "9.0.10",
+          "Microsoft.EntityFrameworkCore.Design": "8.0.21",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.21",
+          "Microsoft.EntityFrameworkCore.Tools": "8.0.21",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.7",
+          "Pomelo.EntityFrameworkCore.MySql": "8.0.3"
+        },
+        "inferredTargets": {
+          "build": "build",
+          "lint": "lint",
+          "serve": "serve",
+          "test": "test"
+        },
+        "ignorePaths": [],
+        "tags": [
+          "nx-dotnet",
+          "nx-dotnet",
+          "nx-dotnet"
+        ]
+      }
+    }
   ],
   "targetDefaults": {
     "test": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ]
     },
     "build": {
-      "dependsOn": ["^build", "codegen", "^codegen"]
+      "dependsOn": [
+        "^build",
+        "codegen",
+        "^codegen"
+      ]
     },
     "codegen": {
       "cache": true
