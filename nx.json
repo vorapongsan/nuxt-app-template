@@ -68,11 +68,21 @@
         "componentTestingTargetName": "component-test",
         "ciTargetName": "e2e-ci"
       }
-    }
+    },
+    "@nx-dotnet/core"
   ],
   "targetDefaults": {
     "test": {
       "dependsOn": ["^build"]
+    },
+    "build": {
+      "dependsOn": ["^build", "codegen", "^codegen"]
+    },
+    "codegen": {
+      "cache": true
+    },
+    "swagger": {
+      "cache": true
     }
   }
 }

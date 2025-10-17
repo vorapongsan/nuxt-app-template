@@ -8,6 +8,9 @@
     },
     {
       "path": "./apps/nuxt-app"
+    },
+    {
+      "path": "./libs/generated/apps/dotnet-app-types"
     }
   ]
 }

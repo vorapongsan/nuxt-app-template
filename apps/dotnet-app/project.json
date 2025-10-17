@@ -1,0 +1,17 @@
+{
+  "name": "apps/dotnet-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/dotnet-app",
+  "tags": [],
+  "targets": {
+    "swagger": {
+      "executor": "@nx-dotnet/core:update-swagger",
+      "outputs": ["{workspaceRoot}/generated/apps/dotnet-app-swagger"],
+      "options": {
+        "output": "generated/apps/dotnet-app-swagger"
+      },
+      "dependsOn": ["build"]
+    }
+  }
+}

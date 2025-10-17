@@ -1,0 +1,6 @@
+@Tpqi.DotnetApp_HostAddress = http://localhost:5212
+
+GET {{Tpqi.DotnetApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
